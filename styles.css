@@ -1,0 +1,121 @@
+
+body {
+    background-color: hsl(233, 47%, 7%);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10%;
+}
+
+.outer-div {
+    border-radius: 10px;
+    display: flex;
+    max-width: 77%;
+    max-height: 55%;
+}
+.box1 {
+    background-color: hsl(244, 38%, 16%);
+    padding: 7% 6%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    flex: 1 1 auto;
+}
+
+.main-heading {
+    color: hsl(0, 0%, 100%);
+    font-size: 2.1rem;
+    font-weight: 700;
+}
+
+.insights {
+    color: hsl(277, 64%, 61%);
+}
+
+.main-paragraph {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 14px;
+    margin-top: 6%;
+    line-height: 1.7;
+    padding-right: 10%;
+}
+
+.box2 {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px; 
+    flex: 0 1 auto;
+    background-color: hsl(287deg 100% 34%);
+}
+
+img.image-header-desktop {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 100%;
+    vertical-align: bottom;
+    opacity: 0.6;
+    
+}
+
+.stats-outer {
+    display: flex;
+    margin-top: 20%;
+}
+
+.stats-inner {
+    display: flex;
+    flex-direction: column;
+    margin-right: 18%;
+}
+
+.stats-heading {
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: 12px;
+    margin-top: 8%;
+}
+
+.stats {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+}
+
+@media screen and (max-width: 600px){
+    
+    .outer-div{
+        height: 82.5%;
+        width: 88%;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+    }
+    
+    .box1{
+        text-align: center;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 0;
+    }
+    .box2{
+        padding-bottom: 0;
+    }
+    .main-paragraph{
+        padding-right: 0;
+    }
+    img.image-header-desktop{
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        border-bottom-right-radius: 0;
+        width: 100%;
+        height: 100%;
+        vertical-align: bottom;
+    }
+    .stats-outer{
+        flex-direction: column;
+    }
+    .stats-inner{
+        margin-right: 0;
+    }
+    .stats-heading{
+        margin-top: 2%;
+        margin-bottom: 6%;
+    }
+}
