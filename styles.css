@@ -10,22 +10,25 @@ body {
 
 .outer-div {
     border-radius: 10px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     max-width: 77%;
     max-height: 55%;
 }
 .box1 {
+    display: flex;
+    flex-direction: column;
     background-color: hsl(244, 38%, 16%);
-    padding: 7% 6%;
+    padding: 10% 13%;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    flex: 1 1 auto;
 }
 
 .main-heading {
     color: hsl(0, 0%, 100%);
     font-size: 2.1rem;
     font-weight: 700;
+    width: 90%;
 }
 
 .insights {
@@ -35,22 +38,23 @@ body {
 .main-paragraph {
     color: hsla(0, 0%, 100%, 0.75);
     font-size: 14px;
-    margin-top: 6%;
+    margin-top: 10%;
     line-height: 1.7;
     padding-right: 10%;
+    width: 85%;
 }
 
 .box2 {
     border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px; 
-    flex: 0 1 auto;
+    border-bottom-right-radius: 5px;
     background-color: hsl(287deg 100% 34%);
 }
 
 img.image-header-desktop {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    height: 100%;
+    height: auto;
+    width: 100%;
     vertical-align: bottom;
     opacity: 0.6;
     
@@ -58,13 +62,14 @@ img.image-header-desktop {
 
 .stats-outer {
     display: flex;
-    margin-top: 20%;
+    margin-top: 15%;
+    justify-content: space-between;
+    width: 80%;
 }
 
 .stats-inner {
     display: flex;
     flex-direction: column;
-    margin-right: 18%;
 }
 
 .stats-heading {
@@ -79,9 +84,10 @@ img.image-header-desktop {
     color: hsl(0, 0%, 100%);
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 907px){
     
     .outer-div{
+        display: flex;
         height: 82.5%;
         width: 88%;
         flex-direction: column-reverse;
@@ -97,8 +103,15 @@ img.image-header-desktop {
     .box2{
         padding-bottom: 0;
     }
+    .main-heading{
+        width: 100%;
+        font-size: 1.3rem;
+    }
     .main-paragraph{
+        margin-top: 10%;
         padding-right: 0;
+        width: 100%;
+        font-size: 12px;
     }
     img.image-header-desktop{
         border-top-right-radius: 5px;
@@ -110,6 +123,8 @@ img.image-header-desktop {
     }
     .stats-outer{
         flex-direction: column;
+        margin-top: 15%;
+        width: 100%;
     }
     .stats-inner{
         margin-right: 0;
@@ -117,5 +132,19 @@ img.image-header-desktop {
     .stats-heading{
         margin-top: 2%;
         margin-bottom: 6%;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width: 907px){
+    .main-heading{
+        font-size: 2.2rem;
+    }
+    .main-paragraph{
+        font-size: 1.2rem;
+    }
+    .stats-outer{
+        flex-direction: row;
+        width: 85%;
+        margin: 10% auto;
     }
 }
